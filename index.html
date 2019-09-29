@@ -10,30 +10,31 @@
   <body>
     <div class="wrapper">
     <!--блок шапки-->
-      <div class="main-header">
-        <header class="main-header__logo">
-          <!--блок с логотипом-->
-          <img class="main-header__logo-image" src="img/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
-          <nav class="main-navigation">
-            <ul class="main-navigation__list-navigation">
-              <li class="main-navigation__item-navigation">
-                <a class="main-navigation__link-navigation" href="info.html">Информация</a>
-              </li>
-              <li class="main-navigation__item-navigation">
-                <a class="main-navigation__link-navigation" href="photo-video.html">Фото и видео</a>
-              </li>
-              <li class="main-navigation__item-navigation">
-                <a class="main-navigation__link-navigation" href="map.html">Карта Штата</a>
-              </li>
-              <li class="main-navigation__item-navigation">
-                <a class="main-navigation__link-navigation" href="inner.html">Гостиницы</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-         <!--блок с большой картинкой и -->
-        <img class="slogan-image" src="img/intro-welcome.svg" width="459" height="353" alt="Слоган Седоны">
+      <header class="main-header__logo">
+        <!--блок с логотипом-->
+        <img class="main-header__logo-image" src="img/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
+        <nav class="main-navigation">
+          <ul class="main-navigation__list-navigation">
+            <li class="main-navigation__item-navigation">
+              <a class="main-navigation__link-navigation" href="info.html">Информация</a>
+            </li>
+            <li class="main-navigation__item-navigation">
+              <a class="main-navigation__link-navigation" href="photo-video.html">Фото и видео</a>
+            </li>
+            <li class="main-navigation__item-navigation">
+              <a class="main-navigation__link-navigation" href="map.html">Карта Штата</a>
+            </li>
+            <li class="main-navigation__item-navigation">
+              <a class="main-navigation__link-navigation" href="inner.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+       <!--блок с большой картинкой и -->
+        <div class="wrapper-image">
+          <img class="slogan-image" src="img/intro-welcome.svg" width="459" height="353" alt="Слоган Седоны">
+        </div>
         <article class="features">
           <header class="features__header">
             <h1 class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -131,38 +132,47 @@
             <button class="hotel-search__button hotel-search__button--brown" type="button">Поиск гостиницы в Седоне</button>
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <form class="hotel-search__form" action="http://echo.htmlacademy.ru" method="post">
-              <label class="hotel-search__label-name">Дата заезда
-                <input class="hotel-search__input" type="text" name="arrival_date" placeholder="27 апреля 2017">
-              </label>
-              <label class="hotel-search__label-name">Дата выезда
-                <input class="hotel-search__input" type="text" name="departure_date" placeholder="4 июля 2017">
-              </label>
-              <label class="hotel-search__label-name">Взрослые
-                <input class="hotel-search__input" type="text" name="amount-adults" value="1"/>
-              </label>
-              <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
-              <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
-              <label class="hotel-search__label-name">Дети
-                <input class="hotel-search__input" type="text" name="amount-children" value="0"/>
-              </label>
-              <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
-              <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
+              <div class="hotel-search">
+                <label class="hotel-search__label-name">Дата заезда
+                  <input class="hotel-search__input" type="text" name="arrival_date" placeholder="27 апреля 2017">
+                </label>
+                <button class="hotel-search__button-calendar" type="button">-</button>
+              </div>
+              <div class="">
+                <label class="hotel-search__label-name">Дата выезда
+                  <input class="hotel-search__input" type="text" name="departure_date" placeholder="4 июля 2017">
+                </label>
+                <button class="hotel-search__button-calendar" type="button">-</button>
+              </div>
+              <div>
+                <label class="hotel-search__label-name">Взрослые
+                  <input class="hotel-search__input" type="text" name="amount-adults" value="1"/>
+                </label>
+                <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
+                <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
+              </div>
+              <div>
+                <label class="hotel-search__label-name">Дети
+                  <input class="hotel-search__input" type="text" name="amount-children" value="0"/>
+                </label>
+                <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
+                <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
+            </div>
             </form>
             <button class="hotel-search__button hotel-search__button--blue" type="submit">Найти</button>
           </div>
         <!--конец блока с картой и формой-->
         </div>
-      </div>
-
+      </main>
       <footer class="main-footer">
         <!--хэштег-->
         <span class="main-footer__hashtag">#visitsedona</span>
         <!--ссылки на соцсети-->
         <div class="main-footer__social">
           <ul class="main-footer__social-list">
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter visually-hidden" href="https://twitter.com">Наша группа в Твиттере</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook visually-hidden" href="https://facebook.com">Наша группа в Фейсбуке</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube visually-hidden" href="https://www.youtube.com">Наш канал на Ютубе</a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter" href="https://twitter.com"><span class="visually-hidden">Наша группа в Твиттере</span></a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook visually-hidden" href="https://facebook.com"><span class="visually-hidden">Наша группа в Фейсбуке</span></a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube visually-hidden" href="https://www.youtube.com"><span class="visually-hidden">Наш канал на Ютубе</span></a></li>
           </ul>
         </div>
         <!--разработчики-->
