@@ -10,211 +10,213 @@
   <body>
     <div class="wrapper">
     <!--блок шапки-->
-      <header class="main-header__logo">
-        <!--блок с логотипом-->
-        <a href="index.html">
-          <img class="main-header__logo-image" src="img/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
-        </a>
-        <nav class="main-navigation">
-          <ul class="main-navigation__list-navigation">
-            <li class="main-navigation__item-navigation">
-              <a class="main-navigation__link-navigation" href="info.html">Информация</a>
-            </li>
-            <li class="main-navigation__item-navigation">
-              <a class="main-navigation__link-navigation" href="photo-video.html">Фото и видео</a>
-            </li>
-            <li class="main-navigation__item-navigation">
-              <a class="main-navigation__link-navigation" href="map.html">Карта Штата</a>
-            </li>
-            <li class="main-navigation__item-navigation">
-              <a class="main-navigation__link-navigation main-navigation__link-navigation--current" href="#">Гостиницы</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <main>
-        <!-- Раздел с формой поиска отеля -->
-        <section class="hotel-search-inner">
-          <h2 class="visually-hidden">Форма поиска гостиницы</h2>
-          <form  class="form-inner">
-            <!-- Группа чекбоксов Инфраструктура -->
-            <fieldset class="form-inner__form-group">
-              <legend class="form-inner__form-title">
-                Инфраструктура:
-              </legend>
-              <ul class="form-inner__list" role="none presentation">
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="pool" id="infrastructure-pool" checked>
-                  <label class="form-inner__label" for="infrastructure-pool">Бассейн</label>
-                </li>
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="parking" id="infrastructure-parking">
-                  <label class="form-inner__label" for="infrastructure-parking">Парковка</label>
-                </li>
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="wifi" id="infrastructure-wifi">
-                  <label class="form-inner__label" for="infrastructure-wifi">wi-fi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <!-- Группа чекбоксов Тип жилья -->
-            <fieldset class="form-inner__form-group">
-              <legend class="form-inner__form-title">
-                Тип жилья:
-              </legend>
-              <ul class="form-inner__list" role="none presentation">
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="hotel" id="type-hotel" checked>
-                  <label class="form-inner__label" for="type-hotel">Гостиница</label>
-                </li>
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="motel" id="type-motel" checked>
-                  <label class="form-inner__label" for="type-motel">Мотель</label>
-                </li>
-                <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="apartments" id="type-apartments" checked>
-                  <label class="form-inner__label" for="type-apartments">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-            <!-- Выбор из диапазона -->
-            <fieldset class="form-inner__form-group">
-              <legend class="form-inner__form-title">
-                Стоимость в сутки (Р):
-              </legend>
-              <div class="form-inner__range-filter">
-                <div class="form-inner__price-fields">
-                  <label class="form-inner__label">
-                    <input class="form-inner__input form-inner__input--text" type="text" name="price-min" value="0" placeholder="От 0">
-                  </label>
-                  <label class="form-inner__label">
-                    <input class="form-inner__input form-inner__input--text" type="text" name="price-max" value="3 000" placeholder="До 3000">
-                  </label>
-                </div>
-                <div class="form-inner__range">
-                  <div class="form-inner__range-bar"></div>
-                  <div class="form-inner__range-bar form-inner__range-bar--fill"></div>
-                  <button class="form-inner__range-grip form-inner__range-grip--min" type="button">Минимальное значение цены</button>
-                  <button class="form-inner__range-grip form-inner__range-grip--max" type="button">Максимальное значение цены</button>
-                </div>
-              </div>
-              <button class="form-inner__button-show" type="submit">Показать</button>
-            </fieldset>
-          </form>
-        </section>
-
-        <!-- Раздел сортировки результатов поиска-->
-        <section class="sorting">
-          <p class="sorting__text">Найдено: 3</p>
-          <h2 class="sorting__title">Сортировка:</h2>
-          <ul class="sorting__list">
-            <li class="sorting__item">
-              <a class="sorting__link sorting__link--current" href="#">По цене</a>
-            </li>
-            <li class="sorting__item">
-              <a class="sorting__link" href="#">По типу</a>
-            </li>
-            <li class="sorting__item">
-              <a class="sorting__link" href="#">По рейтингу</a>
-            </li>
-          </ul>
-          <ul class="sorting__direction-list">
-            <li class="sorting__direction-item">
-              <a class="sorting__direction-link sorting__direction-link--up" href="#">По возрастанию</a>
-            </li>
-            <li class="sorting__direction-item">
-              <a class="sorting__direction-link sorting__direction-link--down sorting__direction-link--current" href="#">По убыванию</a>
-            </li>
-          </ul>
-        </section>
-
-        <div class="hotels">
-          <!--отель 1-->
-          <div class="hotel-wrapper">
-            <div class="hotel-wrapper__picture">
-              <img class="hotels__image" src="img/amara.jpg" alt="Гостиница Amara#">
-            </div>
-            <div class="hotel-wrapper__accommodation">
-              <h2 class="hotel-wrapper__title">Amara resort & Spa</h2>
-              <div>
-                <span class="hotel-wrapper__type">Гостиницы</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
-              </div>
-              <div>
-                <span class="hotel-wrapper__price">от 4000 р.</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
-              </div>
-            </div>
-            <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 8,5</span>
-            </div>
-          </div>
-          <!--отель 2-->
-          <div class="hotel-wrapper">
-            <div class="hotel-wrapper__picture">
-              <img class="hotels__image" src="img/desert-quail.jpg" alt="Мотель Desert Quail">
-            </div>
-            <div class="hotel-wrapper__accommodation">
-              <h2 class="hotel-wrapper__title">Desert Quail Inn</h2>
-              <div>
-                <span class="hotel-wrapper__type">Мотель</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
-              </div>
-              <div>
-                <span class="hotel-wrapper__price">от 3000 р.</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
-              </div>
-            </div>
-            <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 8,9</span>
-            </div>
-          </div>
-          <!--отель 3-->
-          <div class="hotel-wrapper">
-            <div class="hotel-wrapper__picture">
-              <img class="hotels__image" src="img/villas-at-poco.jpg" alt="Апартаменты  Villas">
-            </div>
-            <div class="hotel-wrapper__accommodation">
-              <h2 class="hotel-wrapper__title">Villas at Poco Diablo</h2>
-              <div>
-                <span class="hotel-wrapper__type">Апартаменты</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
-              </div>
-              <div>
-                <span class="hotel-wrapper__price">от 2000 р.</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
-              </div>
-            </div>
-            <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 9,2</span>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <footer class="main-footer">
-        <!--хэштег-->
-        <span class="main-footer__hashtag">#visitsedona</span>
-        <!--ссылки на соцсети-->
-        <div class="main-footer__social">
-          <ul class="main-footer__social-list">
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter" href="https://twitter.com">Наша группа в Твиттере</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook" href="https://facebook.com">Наша группа в Фейсбуке</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube" href="https://www.youtube.com">Наш канал на Ютубе</a></li>
-          </ul>
-        </div>
-        <!--разработчики-->
-        <div class="main-footer__copyright">
-          <span class="main-footer__copyright-text">Website by</span>
-          <a class="main-footer__link-developer" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="main-footer__image-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="лого Академии">
+      <div class="main-header">
+        <header class="main-header__logo">
+          <!--блок с логотипом-->
+          <a href="index.html">
+            <img class="main-header__logo-image" src="img/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
           </a>
-        </div>
-      </footer>
+          <nav class="main-navigation">
+            <ul class="main-navigation__list-navigation">
+              <li class="main-navigation__item-navigation">
+                <a class="main-navigation__link-navigation" href="info.html">Информация</a>
+              </li>
+              <li class="main-navigation__item-navigation">
+                <a class="main-navigation__link-navigation" href="photo-video.html">Фото и видео</a>
+              </li>
+              <li class="main-navigation__item-navigation">
+                <a class="main-navigation__link-navigation" href="map.html">Карта Штата</a>
+              </li>
+              <li class="main-navigation__item-navigation">
+                <a class="main-navigation__link-navigation main-navigation__link-navigation--current" href="#">Гостиницы</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main>
+          <!-- Раздел с формой поиска отеля -->
+          <section class="hotel-search-inner">
+            <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+            <form  class="form-inner">
+              <!-- Группа чекбоксов Инфраструктура -->
+              <fieldset class="form-inner__form-group">
+                <legend class="form-inner__form-title">
+                  Инфраструктура:
+                </legend>
+                <ul class="form-inner__list" role="none presentation">
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="pool" id="infrastructure-pool" checked>
+                    <label class="form-inner__label" for="infrastructure-pool">Бассейн</label>
+                  </li>
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="parking" id="infrastructure-parking">
+                    <label class="form-inner__label" for="infrastructure-parking">Парковка</label>
+                  </li>
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="wifi" id="infrastructure-wifi">
+                    <label class="form-inner__label" for="infrastructure-wifi">wi-fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!-- Группа чекбоксов Тип жилья -->
+              <fieldset class="form-inner__form-group">
+                <legend class="form-inner__form-title">
+                  Тип жилья:
+                </legend>
+                <ul class="form-inner__list" role="none presentation">
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="hotel" id="type-hotel" checked>
+                    <label class="form-inner__label" for="type-hotel">Гостиница</label>
+                  </li>
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="motel" id="type-motel" checked>
+                    <label class="form-inner__label" for="type-motel">Мотель</label>
+                  </li>
+                  <li class="form-inner__item">
+                    <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="apartments" id="type-apartments" checked>
+                    <label class="form-inner__label" for="type-apartments">Апартаменты</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!-- Выбор из диапазона -->
+              <fieldset class="form-inner__form-group">
+                <legend class="form-inner__form-title">
+                  Стоимость в сутки (Р):
+                </legend>
+                <div class="form-inner__range-filter">
+                  <div class="form-inner__price-fields">
+                    <label class="form-inner__label">
+                      <input class="form-inner__input form-inner__input--text" type="text" name="price-min" value="0" placeholder="От 0">
+                    </label>
+                    <label class="form-inner__label">
+                      <input class="form-inner__input form-inner__input--text" type="text" name="price-max" value="3 000" placeholder="До 3000">
+                    </label>
+                  </div>
+                  <div class="form-inner__range">
+                    <div class="form-inner__range-bar"></div>
+                    <div class="form-inner__range-bar form-inner__range-bar--fill"></div>
+                    <button class="form-inner__range-grip form-inner__range-grip--min" type="button">Минимальное значение цены</button>
+                    <button class="form-inner__range-grip form-inner__range-grip--max" type="button">Максимальное значение цены</button>
+                  </div>
+                </div>
+                <button class="form-inner__button-show" type="submit">Показать</button>
+              </fieldset>
+            </form>
+          </section>
+
+          <!-- Раздел сортировки результатов поиска-->
+          <section class="sorting">
+            <p class="sorting__text">Найдено: 3</p>
+            <h2 class="sorting__title">Сортировка:</h2>
+            <ul class="sorting__list">
+              <li class="sorting__item">
+                <a class="sorting__link sorting__link--current" href="#">По цене</a>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link sorting__link--type" href="#">По типу</a>
+              </li>
+              <li class="sorting__item">
+                <a class="sorting__link sorting__link--rating" href="#">По рейтингу</a>
+              </li>
+            </ul>
+            <ul class="sorting__direction-list">
+              <li class="sorting__direction-item">
+                <a class="sorting__direction-link sorting__direction-link--up" href="#">По возрастанию</a>
+              </li>
+              <li class="sorting__direction-item">
+                <a class="sorting__direction-link sorting__direction-link--down sorting__direction-link--current" href="#">По убыванию</a>
+              </li>
+            </ul>
+          </section>
+
+          <div class="hotels">
+            <!--отель 1-->
+            <div class="hotel-wrapper">
+              <div class="hotel-wrapper__picture">
+                <img class="hotels__image" src="img/amara.jpg" alt="Гостиница Amara#">
+              </div>
+              <div class="hotel-wrapper__accommodation">
+                <h2 class="hotel-wrapper__title">Amara resort & Spa</h2>
+                <div>
+                  <span class="hotel-wrapper__type">Гостиницы</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
+                </div>
+                <div>
+                  <span class="hotel-wrapper__price">от 4000 р.</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
+                </div>
+              </div>
+              <div class="hotel-wrapper__rating">
+                <span class="hotel-wrapper__stars">Звёзды</span>
+                <span class="hotel-wrapper__raitng-text">Рейтинг 8,5</span>
+              </div>
+            </div>
+            <!--отель 2-->
+            <div class="hotel-wrapper">
+              <div class="hotel-wrapper__picture">
+                <img class="hotels__image" src="img/desert-quail.jpg" alt="Мотель Desert Quail">
+              </div>
+              <div class="hotel-wrapper__accommodation">
+                <h2 class="hotel-wrapper__title">Desert Quail Inn</h2>
+                <div>
+                  <span class="hotel-wrapper__type">Мотель</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
+                </div>
+                <div>
+                  <span class="hotel-wrapper__price">от 3000 р.</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
+                </div>
+              </div>
+              <div class="hotel-wrapper__rating">
+                <span class="hotel-wrapper__stars">Звёзды</span>
+                <span class="hotel-wrapper__raitng-text">Рейтинг 8,9</span>
+              </div>
+            </div>
+            <!--отель 3-->
+            <div class="hotel-wrapper">
+              <div class="hotel-wrapper__picture">
+                <img class="hotels__image" src="img/villas-at-poco.jpg" alt="Апартаменты  Villas">
+              </div>
+              <div class="hotel-wrapper__accommodation">
+                <h2 class="hotel-wrapper__title">Villas at Poco Diablo</h2>
+                <div>
+                  <span class="hotel-wrapper__type">Апартаменты</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
+                </div>
+                <div>
+                  <span class="hotel-wrapper__price">от 2000 р.</span>
+                  <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
+                </div>
+              </div>
+              <div class="hotel-wrapper__rating">
+                <span class="hotel-wrapper__stars">Звёзды</span>
+                <span class="hotel-wrapper__raitng-text">Рейтинг 9,2</span>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="main-footer">
+          <!--хэштег-->
+          <span class="main-footer__hashtag">#visitsedona</span>
+          <!--ссылки на соцсети-->
+          <div class="main-footer__social">
+            <ul class="main-footer__social-list">
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter" href="https://twitter.com">Наша группа в Твиттере</a></li>
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook" href="https://facebook.com">Наша группа в Фейсбуке</a></li>
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube" href="https://www.youtube.com">Наш канал на Ютубе</a></li>
+            </ul>
+          </div>
+          <!--разработчики-->
+          <div class="main-footer__copyright">
+            <span class="main-footer__copyright-text">Website by</span>
+            <a class="main-footer__link-developer" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="main-footer__image-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="лого Академии">
+            </a>
+          </div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
