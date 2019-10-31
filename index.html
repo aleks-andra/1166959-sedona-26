@@ -16,24 +16,27 @@
           <img class="main-header__logo-image" src="img/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны">
           <nav class="main-navigation">
             <ul class="main-navigation__list-navigation">
-              <li class="main-navigation__item-navigation">
+              <li class="main-navigation__item-navigation main-navigation__item-navigation--left">
                 <a class="main-navigation__link-navigation" href="info.html">Информация</a>
               </li>
-              <li class="main-navigation__item-navigation">
+              <li class="main-navigation__item-navigation main-navigation__item-navigation--left">
                 <a class="main-navigation__link-navigation" href="photo-video.html">Фото и видео</a>
               </li>
-              <li class="main-navigation__item-navigation">
+              <li class="main-navigation__item-navigation main-navigation__item-navigation--right">
                 <a class="main-navigation__link-navigation" href="map.html">Карта Штата</a>
               </li>
-              <li class="main-navigation__item-navigation">
+              <li class="main-navigation__item-navigation main-navigation__item-navigation--right">
                 <a class="main-navigation__link-navigation" href="inner.html">Гостиницы</a>
               </li>
             </ul>
           </nav>
         </header>
 
-         <!--блок с большой картинкой и -->
+        <!--блок с картинками -->
+        <div class="background-images">
         <img class="slogan-image" src="img/intro-welcome.svg" width="459" height="353" alt="Слоган Седоны">
+        </div>
+
         <article class="features">
           <header class="features__header">
             <h1 class="features__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -51,7 +54,7 @@
               </div>
               <!--подблок с картинкой дома-->
               <div class="features__image-wrapper features__image-wrapper--right">
-                <img class="features__image" src="img/house.jpg" width="800" height="255" alt="Фото дома">
+                <img class="features__image" src="img/house.jpg" width="800" height="256" alt="Фото дома">
               </div>
               <!--конец блока 1-->
             </div>
@@ -60,17 +63,17 @@
             <div class="attractions">
               <!--подблок с иконкой в виде домика-->
               <div class="attractions__item">
-                <h2 class="attractions__title">Жильё</h2>
+                <h2 class="attractions__title attractions__title--house">Жильё</h2>
                 <p class="attractions__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </div>
               <!--подблок с иконкой в виде бургера-->
               <div class="attractions__item">
-                <h2 class="attractions__title">Еда</h2>
+                <h2 class="attractions__title attractions__title--food">Еда</h2>
                 <p class="attractions__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </div>
               <!--подблок с иконкой в виде коробки-->
               <div class="attractions__item">
-                <h2 class="attractions__title">Сувениры</h2>
+                <h2 class="attractions__title attractions__title--gift">Сувениры</h2>
                 <p class="attractions__text">Не только китайского, но и местного производства!</p>
               </div>
               <!--конец блока 2-->
@@ -84,7 +87,7 @@
               </div>
               <!--подблок с цифрой 2-->
               <div class="features__feature-item feature-item feature-item--blue">
-                <h2 class="feature-item__title feature-item__title--white">Там есть Мост дьявола</h2>
+                <h2 class="feature-item__title feature-item__title--white">Там есть<br>Мост дьявола</h2>
                 <span class="feature-item__text feature-item__text--white">№2</span>
                 <p class="feature-item__text feature-item__text--white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
               </div>
@@ -92,24 +95,24 @@
             </div>
 
             <!--начало блока 4-->
-            <div class="features__list">
+            <div class="features__description">
               <!--подблок с цифрой 3 -->
               <div class="features__feature-item feature-item">
                 <h2 class="feature-item__title">Небольшая площадь</h2>
                 <span class="feature-item__text">№3</span>
-                <p class="feature-item__text">Все достопримечательности  находятся</p>
+                <p class="feature-item__text">Все достопримечательностя находятся очень близко</p>
               </div>
               <!--подблок с цифрой 4 -->
               <div class="features__feature-item feature-item">
                 <h2 class="feature-item__title"> Красивая дорога</h2>
                 <span class="feature-item__text">№4</span>
-                <p class="feature-item__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+                <p class="feature-item__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
               <!--подблок с цифрой 5 -->
               <div class="features__feature-item feature-item">
                 <h2 class="feature-item__title">Мало туристов</h2>
                 <span class="feature-item__text">№5</span>
-                <p class="feature-item__text">Большинство едет в гранд каньон и толпится там</p>
+                <p class="feature-item__text feature-item__text--canyon">Большинство едет в гранд каньон и толпится там</p>
               </div>
               <!--конец блока 4-->
             </div>
@@ -120,61 +123,88 @@
         <div class="map">
           <div class="map__wrapper-text">
             <h2 class="map__title">Заинтересовались?</h2>
-            <p class="map__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="map__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </div>
-          <img class="map__image" src="img/map.jpg" width="1200" height="590" alt="Карта">
-        </div>
 
-        <!--начало блока формой-->
-        <div class="hotel-search">
-          <div class="hotel-search_wrapper-form">
-            <button class="hotel-search__button hotel-search__button--brown" type="button">Поиск гостиницы в Седоне</button>
-            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-            <form class="hotel-search__form" action="http://echo.htmlacademy.ru" method="post">
-              <label class="hotel-search__label-name">Дата заезда
-                <input class="hotel-search__input" type="text" name="arrival_date" placeholder="27 апреля 2017">
-              </label>
-              <label class="hotel-search__label-name">Дата выезда
-                <input class="hotel-search__input" type="text" name="departure_date" placeholder="4 июля 2017">
-              </label>
-              <label class="hotel-search__label-name">Взрослые
-                <input class="hotel-search__input" type="text" name="amount-adults" value="1"/>
-              </label>
-              <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
-              <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
-              <label class="hotel-search__label-name">Дети
-                <input class="hotel-search__input" type="text" name="amount-children" value="0"/>
-              </label>
-              <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
-              <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
-            </form>
-            <button class="hotel-search__button hotel-search__button--blue" type="submit">Найти</button>
-          </div>
+          <button class="hotel-search__button hotel-search__button--brown" type="button">Поиск гостиницы в Седоне</button>
+
+          <!--начало блока формой-->
+          <div class="hotel-search">
+            <div class="hotel-search_wrapper-form">
+              <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+              <form class="hotel-search__form" action="http://echo.htmlacademy.ru" method="post">
+                <div class="hotel-search__wrapper-field">
+                  <label class="hotel-search__label-name" for="arrival-date-field">Дата заезда:</label>
+                  <input class="hotel-search__input hotel-search__input--dates" id="arrival-date-field" type="text" name="arrival_date" placeholder="24 апреля 2017">
+                  <button class="hotel-search__button hotel-search__button--dates" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22">
+                      <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="hotel-search__wrapper-field">
+                <label class="hotel-search__label-name" for="departure-date-field">Дата выезда:</label>
+                <input class="hotel-search__input hotel-search__input--dates" id="departure-date-field" type="text" name="departure_date" placeholder="4 июля 2017">
+                <button class="hotel-search__button hotel-search__button--dates" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22">
+                    <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+                  </svg>
+                </button>
+                </div>
+
+                <div class="hotel-search__wrapper-field hotel-search__wrapper-field--margin-bottom">
+                  <div class="hotel-search__wrapper-people-number">
+                    <label class="hotel-search__label-name hotel-search__label-name--margin-adults" for="adults">Взрослые</label>
+                    <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
+                    <input class="hotel-search__input hotel-search__input--number" id="adults" type="text" name="amount-adults" value="2"/>
+                    <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
+                  </div>
+
+                  <div class="hotel-search__wrapper-people-number">
+                    <label class="hotel-search__label-name hotel-search__label-name--margin-kids" for="kids">Дети</label>
+                    <button class="hotel-search__button hotel-search__button--minus" type="button">-</button>
+                    <input class="hotel-search__input hotel-search__input--number" id="kids" type="text" name="amount-children" value="0"/>
+                    <button class="hotel-search__button hotel-search__button--plus" type="button">+</button>
+                  </div>
+                </div>
+
+              </form>
+              <button class="hotel-search__button hotel-search__button--blue" type="submit">Найти</button>
+            </div>
+          <img class="map__image" src="img/map.jpg" width="1200" height="590" alt="Карта">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418951.79386416427!2d-111.40577700808174!3d34.88052328887063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1569522202751!5m2!1sru!2sru"
+          width="1200" height="593" style="border:0;" allowfullscreen="">
+          </iframe>
+        </div>
         <!--конец блока с картой и формой-->
         </div>
       </div>
 
-      <footer class="main-footer">
-        <!--хэштег-->
-        <div class="main-footer__hashtag">
-        <span class="main-footer__hashtag-text">#visitsedona</span>
-        </div>
-        <!--ссылки на соцсети-->
-        <div class="main-footer__social">
-          <ul class="main-footer__social-list">
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter visually-hidden" href="https://twitter.com">Наша группа в Твиттере</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook visually-hidden" href="https://facebook.com">Наша группа в Фейсбуке</a></li>
-            <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube visually-hidden" href="https://www.youtube.com">Наш канал на Ютубе</a></li>
-          </ul>
-        </div>
-        <!--разработчики-->
-        <div class="main-footer__copyright">
-          <span class="main-footer__copyright-text">Website by</span>
-          <a class="main-footer__link-developer" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="main-footer__image-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="лого Академии">
-          </a>
-        </div>
-      </footer>
+      <div class="footer">
+        <footer class="main-footer">
+          <!--хэштег-->
+          <div class="main-footer__hashtag">
+          <span class="main-footer__hashtag-text">#visitsedona</span>
+          </div>
+          <!--ссылки на соцсети-->
+          <div class="main-footer__social">
+            <ul class="main-footer__social-list">
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-twitter" href="https://twitter.com"><span class="visually-hidden">Наша группа в Твиттере</span></a></li>
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-facebook" href="https://facebook.com"><span class="visually-hidden">Наша группа в Фейсбуке</span></a></li>
+              <li class="main-footer__item"><a class="main-footer__link main-footer__link--icon-youtube" href="https://www.youtube.com"><span class="visually-hidden">Наш канал на Ютубе</span></a></li>
+            </ul>
+          </div>
+          <!--разработчики-->
+          <div class="main-footer__copyright">
+            <span class="main-footer__copyright-text">Website by</span>
+            <a class="main-footer__link-developer" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="main-footer__image-developer" src="img/logo-htmlacademy.svg" width="115" height="41" alt="лого Академии">
+            </a>
+          </div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
