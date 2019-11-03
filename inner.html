@@ -52,7 +52,7 @@
                   <label class="form-inner__label" for="infrastructure-parking">Парковка</label>
                 </li>
                 <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="wifi" id="infrastructure-wifi">
+                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="infrastructure" value="wifi" id="infrastructure-wifi" disabled>
                   <label class="form-inner__label" for="infrastructure-wifi">wi-fi</label>
                 </li>
               </ul>
@@ -72,30 +72,33 @@
                   <label class="form-inner__label" for="type-motel">Мотель</label>
                 </li>
                 <li class="form-inner__item">
-                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="apartments" id="type-apartments" checked>
+                  <input class="form-inner__input form-inner__input--checkbox visually-hidden" type="checkbox" name="type-housing" value="apartments" id="type-apartments" checked disabled>
                   <label class="form-inner__label" for="type-apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
             <!-- Выбор из диапазона -->
             <fieldset class="form-inner__form-group">
-              <legend class="form-inner__form-title">
+              <legend class="form-inner__form-title form-inner__form-title--price">
                 Стоимость в сутки (Р):
               </legend>
               <div class="form-inner__range-filter">
                 <div class="form-inner__price-fields">
-                  <label class="form-inner__label">
-                    <input class="form-inner__input form-inner__input--text" type="text" name="price-min" value="0" placeholder="От 0">
+                  <label class="form-inner__label">От
+                    <input class="form-inner__input form-inner__input--text" type="text" name="price-min" value="0">
                   </label>
-                  <label class="form-inner__label">
-                    <input class="form-inner__input form-inner__input--text" type="text" name="price-max" value="3 000" placeholder="До 3000">
+                  <label class="form-inner__label">До
+                    <input class="form-inner__input form-inner__input--text" type="text" name="price-max" value="3000">
                   </label>
                 </div>
                 <div class="form-inner__range">
-                  <div class="form-inner__range-bar"></div>
-                  <div class="form-inner__range-bar form-inner__range-bar--fill"></div>
-                  <button class="form-inner__range-grip form-inner__range-grip--min" type="button">Минимальное значение цены</button>
-                  <button class="form-inner__range-grip form-inner__range-grip--max" type="button">Максимальное значение цены</button>
+                  <div class="form-inner__range-bar">
+                    <div class="form-inner__range-bar form-inner__range-bar--fill"></div>
+                  </div>
+                  <!--
+                  <button class="form-inner__range-grip form-inner__range-grip--min" type="button"><span class="visually-hidden">Минимальное значение цены</span></button>
+                  <button class="form-inner__range-grip form-inner__range-grip--max" type="button"><span class="visually-hidden">Максимальное значение цены</span></button>
+                -->
                 </div>
               </div>
               <button class="form-inner__button-show" type="submit">Показать</button>
@@ -112,18 +115,26 @@
               <a class="sorting__link sorting__link--current" href="#">По цене</a>
             </li>
             <li class="sorting__item">
-              <a class="sorting__link sorting__link--type" href="#">По типу</a>
+              <a class="sorting__link" href="#">По типу</a>
             </li>
             <li class="sorting__item">
-              <a class="sorting__link sorting__link--rating" href="#">По рейтингу</a>
+              <a class="sorting__link" href="#">По рейтингу</a>
             </li>
           </ul>
           <ul class="sorting__direction-list">
             <li class="sorting__direction-item">
-              <a class="sorting__direction-link sorting__direction-link--up" href="#">По возрастанию</a>
+              <a class="sorting__direction-link sorting__direction-link--up" href="#"><span class="visually-hidden">По возрастанию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewbox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a>
             </li>
             <li class="sorting__direction-item">
-              <a class="sorting__direction-link sorting__direction-link--down sorting__direction-link--current" href="#">По убыванию</a>
+              <a class="sorting__direction-link sorting__direction-link--down sorting__direction-link--current" href="#"><span class="visually-hidden">По убыванию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                </svg>
+              </a>
             </li>
           </ul>
         </section>
@@ -136,18 +147,19 @@
             </div>
             <div class="hotel-wrapper__accommodation">
               <h2 class="hotel-wrapper__title">Amara resort & Spa</h2>
-              <div>
-                <span class="hotel-wrapper__type">Гостиницы</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
-              </div>
-              <div>
+              <div class="hotel-wrapper__details">
+                <span class="hotel-wrapper__type hotel-wrapper__type--hotel">Гостиницы</span>
                 <span class="hotel-wrapper__price">от 4000 р.</span>
+              </div>
+              <div class="hotel-wrapper__buttons">
+                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
                 <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
               </div>
             </div>
             <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 8,5</span>
+              <span class="visually-hidden">Звёзды</span>
+              <div class="hotel-wrapper__stars hotel-wrapper__stars--four"></div>
+              <span class="hotel-wrapper__rating-text">Рейтинг: 8,5</span>
             </div>
           </div>
           <!--отель 2-->
@@ -157,18 +169,19 @@
             </div>
             <div class="hotel-wrapper__accommodation">
               <h2 class="hotel-wrapper__title">Desert Quail Inn</h2>
-              <div>
-                <span class="hotel-wrapper__type">Мотель</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
+              <div class="hotel-wrapper__details">
+                <span class="hotel-wrapper__type hotel-wrapper__type--motel">Мотель</span>
+                  <span class="hotel-wrapper__price">от 3000 р.</span>
               </div>
-              <div>
-                <span class="hotel-wrapper__price">от 3000 р.</span>
+              <div class="hotel-wrapper__buttons">
+                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
                 <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
               </div>
             </div>
             <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 8,9</span>
+              <span class="visually-hidden">Звёзды</span>
+              <div class="hotel-wrapper__stars hotel-wrapper__stars--three"></div>
+              <span class="hotel-wrapper__rating-text">Рейтинг: 8,9</span>
             </div>
           </div>
           <!--отель 3-->
@@ -178,25 +191,26 @@
             </div>
             <div class="hotel-wrapper__accommodation">
               <h2 class="hotel-wrapper__title">Villas at Poco Diablo</h2>
-              <div>
-                <span class="hotel-wrapper__type">Апартаменты</span>
-                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
-              </div>
-              <div>
+              <div class="hotel-wrapper__details">
+                <span class="hotel-wrapper__type hotel-wrapper__type--apartment">Апартаменты</span>
                 <span class="hotel-wrapper__price">от 2000 р.</span>
+              </div>
+              <div class="hotel-wrapper__buttons">
+                <a href="#" class="hotel-wrapper__button hotel-wrapper__button--blue">Подробнее</a>
                 <a href="#" class="hotel-wrapper__button hotel-wrapper__button--brown">Забронировать</a>
               </div>
             </div>
             <div class="hotel-wrapper__rating">
-              <span class="hotel-wrapper__stars">Звёзды</span>
-              <span class="hotel-wrapper__raitng-text">Рейтинг 9,2</span>
+              <span class="visually-hidden">Звёзды</span>
+              <div class="hotel-wrapper__stars hotel-wrapper__stars--two"></div>
+              <span class="hotel-wrapper__rating-text">Рейтинг: 9,2</span>
             </div>
           </div>
         </div>
       </main>
 
       <footer class="footer">
-          <div class="main-footer">
+          <div class="main-footer main-footer--inner">
           <!--хэштег-->
           <div class="main-footer__hashtag">
           <span class="main-footer__hashtag-text">#visitsedona</span>
