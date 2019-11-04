@@ -10,17 +10,20 @@ var amountchildren = popup.querySelector("[name=amount-children]");
 
 
 buttonPopup.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popup.classList.toggle("hotel-search_wrapper-form--show");
+  evt.preventDefault();
+  popup.classList.toggle("hotel-search_wrapper-form--show");
 });
 
 form.addEventListener("submit", function(evt) {
   evt.preventDefault();
-if (!arrivaldate.value || !departuredate.value || !amountadults.value || !amountchildren.value) {
+  if (!arrivaldate.value || !departuredate.value || !amountadults.value || !amountchildren.value) {
     console.log("Ошибка");
+    popup.classList.remove("hotel-search_wrapper-form--error");
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("hotel-search_wrapper-form--error");
   } else {
     console.log("Отправка");
     form.submit();
   }
 });
+
